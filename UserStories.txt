@@ -1,0 +1,39 @@
+ As a Buyer
+1. User Registration and Login
+   - As a buyer, I want to register an account so that I can save my searches and favorite listings.
+   - As a buyer, I want to log in to my account so that I can access my saved searches and favorite listings.
+
+2. Search and Filter Properties
+   - As a buyer, I want to search for properties based on location, price range, and property type so that I can find properties that match my criteria.
+
+3. View Property Details
+   - As a buyer, I want to view detailed information about a property, including photos, and descriptions, so that I can evaluate the property.
+
+4. Save Properties
+   - As a buyer, I want to save properties to my favorites so that I can easily access them later.
+
+5. Provide Feedback
+   - As a buyer, I want to leave reviews and ratings for properties I have visited so that I can share my experiences with others.
+
+As a Seller/Agent
+1. User Registration and Login
+   - As a seller/agent, I want to register an account so that I can list my properties for sale or rent.
+   - As a seller/agent, I want to log in to my account so that I can manage my property listings.
+
+2. List Properties
+   - As a seller/agent, I want to create property listings with details such as price, location, photos, and descriptions so that potential buyers can view them.
+
+3. Manage Listings
+   - As a seller/agent, I want to update and delete my property listings so that I can keep the information current and accurate.
+
+4. Receive Notifications
+   - As a seller/agent, I want to receive notifications about inquiries and bookings so that I can respond promptly.
+
+As an Administrator
+1. Manage Users
+   - As an administrator, I want to manage user accounts so that I can ensure the platform is used appropriately.
+   - As an administrator, I want to view, edit, and delete user accounts so that I can maintain the integrity of the platform.
+
+2. Manage Property Listings
+   - As an administrator, I want to monitor and manage property listings to ensure they comply with platform guidelines.
+   - As an administrator, I want to approve or reject property listings so that only accurate and reliable listings are available.
