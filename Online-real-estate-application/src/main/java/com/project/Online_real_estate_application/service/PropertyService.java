@@ -2,6 +2,16 @@ package com.project.Online_real_estate_application.service;
 
 import com.project.Online_real_estate_application.dto.Propertydata;
 
+import java.util.List;
+import java.util.Optional;
+
 public interface PropertyService {
     Propertydata createProperty(Propertydata propertydata);
+    Optional<Propertydata> updateProperty(Long id, Propertydata propertydata);
+    Optional<Propertydata> partialUpdateProperty(Long id, Propertydata propertydata);
+    void deleteProperty(Long id);
+    List<Propertydata> getPropertiesByLocation(String location);
+    List<Propertydata> getPropertiesByPriceRange(double minPrice, double maxPrice);
+    List<Propertydata> getPropertiesByLocationAndPriceRange(String location, double minPrice, double maxPrice);
+
 }
