@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -55,6 +56,42 @@ class UserServiceimpl implements UserService {
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Userdata> updateUser(Long id, Userdata userdata) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
+        if (optionalUserEntity.isPresent()) {
+            UserEntity userEntity = optionalUserEntity.get();
+            userEntity.setUsername(userdata.getUsername());
+            userEntity.setPassword(userdata.getPassword());
+            userEntity.setEmail(userdata.getEmail());
+            UserEntity updatedUser = userRepository.save(userEntity);
+            return Optional.of(UserMapper.mapToAccountData(updatedUser));
+        } else {
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Optional<Userdata> partialUpdateUser(Long id, Userdata userdata) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findById(id);
+        if (optionalUserEntity.isPresent()) {
+            UserEntity userEntity = optionalUserEntity.get();
+            if (userdata.getUsername() != null){
+                userEntity.setUsername(userdata.getUsername());
+            }
+            if (userdata.getPassword() != null){
+                userEntity.setPassword(userdata.getPassword());
+            }
+            if (userdata.getEmail() != null){
+                userEntity.setEmail(userdata.getEmail());
+            }
+            UserEntity updatedUser = userRepository.save(userEntity);
+            return Optional.of(UserMapper.mapToAccountData(updatedUser));
+        } else {
+            return Optional.empty();
+        }
     }
 
 }
