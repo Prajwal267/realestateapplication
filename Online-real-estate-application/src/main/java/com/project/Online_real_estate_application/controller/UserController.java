@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -30,5 +32,15 @@ public class UserController {
     @GetMapping("/username/{username}")
     public ResponseEntity<Userdata> getUser(@PathVariable(value = "username") String username) {
         return ResponseEntity.ok(userService.getAccountByUserName(username));
+    }
+    @GetMapping
+    public ResponseEntity<List<Userdata>> getAllUsers() {
+        List<Userdata> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
+    }
+    @DeleteMapping("/id/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok().build();
     }
 }

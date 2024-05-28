@@ -8,6 +8,9 @@ import com.project.Online_real_estate_application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 class UserServiceimpl implements UserService {
@@ -38,4 +41,20 @@ class UserServiceimpl implements UserService {
         UserEntity userEntity = userRepository.findByUsername(username);
         return UserMapper.mapToAccountData(userEntity);
     }
+
+    @Override
+    public List<Userdata> getAllUsers() {
+        List<UserEntity> users = userRepository.findAll();
+        List<Userdata> UserDataList = new ArrayList<>();
+        for (UserEntity user : users) {
+            UserDataList.add(UserMapper.mapToAccountData(user));
+        }
+        return UserDataList;
+    }
+
+    @Override
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
+
 }
