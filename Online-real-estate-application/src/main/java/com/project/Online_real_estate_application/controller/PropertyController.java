@@ -24,6 +24,11 @@ public class PropertyController {
     public ResponseEntity<Propertydata> addProperty(@RequestBody Propertydata propertydata) {
         return new ResponseEntity<>(propertyService.createProperty(propertydata), HttpStatus.CREATED);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<Propertydata> getUserById(@PathVariable Long id) {
+        Propertydata propertydata = propertyService.getAccountById(id);
+        return ResponseEntity.ok(propertydata);
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<Propertydata> updateProperty(@PathVariable Long id, @RequestBody Propertydata propertydata) {

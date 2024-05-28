@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface PropertyService {
     Propertydata createProperty(Propertydata propertydata);
+    Propertydata getAccountById(Long id);
     Optional<Propertydata> updateProperty(Long id, Propertydata propertydata);
     Optional<Propertydata> partialUpdateProperty(Long id, Propertydata propertydata);
     void deleteProperty(Long id);

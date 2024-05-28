@@ -30,6 +30,14 @@ public class PropertyServiceimpl implements PropertyService {
     }
 
     @Override
+    public Propertydata getAccountById(Long id) {
+        PropertyEntity propertyEntity = propertyRepository
+                .findById(id)
+                .orElseThrow(() -> new RuntimeException("User does not exist"));
+        return PropertyMapper.mapToAccountData(propertyEntity);
+    }
+
+    @Override
     public Optional<Propertydata> updateProperty(Long id, Propertydata propertydata) {
         Optional<PropertyEntity> optionalPropertyEntity = propertyRepository.findById(id);
         if (optionalPropertyEntity.isPresent()) {
@@ -81,7 +89,7 @@ public class PropertyServiceimpl implements PropertyService {
 
     @Override
     public List<Propertydata> getPropertiesByLocation(String location) {
-        List<PropertyEntity> properties = propertyRepository.findByLocation(location);
+        List<PropertyEntity> properties = propertyRepository.findByLocationContainingIgnoreCase(location);
         List<Propertydata> propertyDataList = new ArrayList<>();
         for (PropertyEntity property : properties) {
             propertyDataList.add(PropertyMapper.mapToAccountData(property));
@@ -101,7 +109,7 @@ public class PropertyServiceimpl implements PropertyService {
 
     @Override
     public List<Propertydata> getPropertiesByLocationAndPriceRange(String location, double minPrice, double maxPrice) {
-        List<PropertyEntity> properties = propertyRepository.findByLocationAndPriceBetween(location, minPrice, maxPrice);
+        List<PropertyEntity> properties = propertyRepository.findByLocationContainingIgnoreCaseAndPriceBetween(location, minPrice, maxPrice);
         List<Propertydata> propertyDataList = new ArrayList<>();
         for (PropertyEntity property : properties) {
             propertyDataList.add(PropertyMapper.mapToAccountData(property));

@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public interface PropertyRepository extends JpaRepository<PropertyEntity, Long> {
-    List<PropertyEntity> findByLocation(String location);
+    List<PropertyEntity> findByLocationContainingIgnoreCase(String location);
     List<PropertyEntity> findByPriceBetween(double minPrice, double maxPrice);
-    List<PropertyEntity> findByLocationAndPriceBetween(String location, double minPrice, double maxPrice);
+    List<PropertyEntity> findByLocationContainingIgnoreCaseAndPriceBetween(String location, double minPrice, double maxPrice);
 }

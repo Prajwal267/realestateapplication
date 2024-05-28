@@ -9,8 +9,8 @@ public class PropertyMapper {
         PropertyEntity propertyEntity = new PropertyEntity(
                 propertydata.getId(),
                 propertydata.getTitle(),
-                propertydata.getLocation(),
                 propertydata.getDescription(),
+                propertydata.getLocation(),
                 propertydata.getPrice(),
                 propertydata.getImageUrl());
         return propertyEntity;
