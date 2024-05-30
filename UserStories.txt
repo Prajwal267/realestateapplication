@@ -1,4 +1,4 @@
- As a Buyer
+ As a Buyer/user:
 1. User Registration and Login
    - As a buyer, I want to register an account so that I can save my searches and favorite listings.
    - As a buyer, I want to log in to my account so that I can access my saved searches and favorite listings.
@@ -15,7 +15,7 @@
 5. Provide Feedback
    - As a buyer, I want to leave reviews and ratings for properties I have visited so that I can share my experiences with others.
 
-As a Seller/Agent
+As a Seller/Agent:
 1. User Registration and Login
    - As a seller/agent, I want to register an account so that I can list my properties for sale or rent.
    - As a seller/agent, I want to log in to my account so that I can manage my property listings.
@@ -29,7 +29,7 @@ As a Seller/Agent
 4. Receive Notifications
    - As a seller/agent, I want to receive notifications about inquiries and bookings so that I can respond promptly.
 
-As an Administrator
+As an Administrator:
 1. Manage Users
    - As an administrator, I want to manage user accounts so that I can ensure the platform is used appropriately.
    - As an administrator, I want to view, edit, and delete user accounts so that I can maintain the integrity of the platform.

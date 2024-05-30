@@ -50,14 +50,14 @@ public class PropertyController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Propertydata>> searchProperties(
-            @RequestParam(required = false) String location,
+            @RequestParam(required = false) String city,
             @RequestParam(required = false) Double minPrice,
             @RequestParam(required = false) Double maxPrice) {
 
-        if (location != null && minPrice != null && maxPrice != null) {
-            return ResponseEntity.ok(propertyService.getPropertiesByLocationAndPriceRange(location, minPrice, maxPrice));
-        } else if (location != null) {
-            return ResponseEntity.ok(propertyService.getPropertiesByLocation(location));
+        if (city != null && minPrice != null && maxPrice != null) {
+            return ResponseEntity.ok(propertyService.getPropertiesByCityAndPriceRange(city, minPrice, maxPrice));
+        } else if (city != null) {
+            return ResponseEntity.ok(propertyService.getPropertiesByCity(city));
         } else if (minPrice != null && maxPrice != null) {
             return ResponseEntity.ok(propertyService.getPropertiesByPriceRange(minPrice, maxPrice));
         } else {

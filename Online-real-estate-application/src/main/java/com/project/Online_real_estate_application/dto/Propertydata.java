@@ -8,9 +8,12 @@ import lombok.Data;
 public class Propertydata {
     private Long id;
     private String title;
+    private String type;
+    private double bhk;
     private String description;
-
-    private String location;
+    private String area;
+    private String city;
+    private String locationUrl;
     private double price;
     private String imageUrl;
 }

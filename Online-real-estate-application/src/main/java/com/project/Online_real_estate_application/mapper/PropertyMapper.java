@@ -9,8 +9,12 @@ public class PropertyMapper {
         PropertyEntity propertyEntity = new PropertyEntity(
                 propertydata.getId(),
                 propertydata.getTitle(),
+                propertydata.getType(),
+                propertydata.getBhk(),
                 propertydata.getDescription(),
-                propertydata.getLocation(),
+                propertydata.getArea(),
+                propertydata.getCity(),
+                propertydata.getLocationUrl(),
                 propertydata.getPrice(),
                 propertydata.getImageUrl());
         return propertyEntity;
@@ -20,8 +24,12 @@ public class PropertyMapper {
         Propertydata propertydata = new Propertydata(
                 propertyEntity.getId(),
                 propertyEntity.getTitle(),
+                propertyEntity.getType(),
+                propertyEntity.getBhk(),
                 propertyEntity.getDescription(),
-                propertyEntity.getLocation(),
+                propertyEntity.getArea(),
+                propertyEntity.getCity(),
+                propertyEntity.getLocationUrl(),
                 propertyEntity.getPrice(),
                 propertyEntity.getImageUrl()
         );

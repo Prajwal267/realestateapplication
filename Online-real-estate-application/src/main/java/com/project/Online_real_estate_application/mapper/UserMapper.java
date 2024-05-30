@@ -9,7 +9,8 @@ public class UserMapper {
                 userdata.getId(),
                 userdata.getUsername(),
                 userdata.getPassword(),
-                userdata.getEmail());
+                userdata.getEmail(),
+                userdata.getRole());
         return userEntity;
     }
     public static Userdata mapToAccountData(UserEntity userEntity){
@@ -17,7 +18,8 @@ public class UserMapper {
                 userEntity.getId(),
                 userEntity.getUsername(),
                 userEntity.getPassword(),
-                userEntity.getEmail());
+                userEntity.getEmail(),
+                userEntity.getRole());
         return userdata;
     }
 }

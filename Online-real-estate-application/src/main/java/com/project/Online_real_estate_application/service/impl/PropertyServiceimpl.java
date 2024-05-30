@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class PropertyServiceimpl implements PropertyService {
@@ -43,9 +42,13 @@ public class PropertyServiceimpl implements PropertyService {
         if (optionalPropertyEntity.isPresent()) {
             PropertyEntity propertyEntity = optionalPropertyEntity.get();
             propertyEntity.setTitle(propertydata.getTitle());
-            propertyEntity.setLocation(propertydata.getLocation());
-            propertyEntity.setPrice(propertydata.getPrice());
+            propertyEntity.setType(propertydata.getType());
+            propertyEntity.setBhk(propertydata.getBhk());
             propertyEntity.setDescription(propertydata.getDescription());
+            propertyEntity.setArea(propertydata.getArea());
+            propertyEntity.setCity(propertydata.getCity());
+            propertyEntity.setLocationUrl(propertyEntity.getLocationUrl());
+            propertyEntity.setPrice(propertydata.getPrice());
             propertyEntity.setImageUrl(propertydata.getImageUrl());
             PropertyEntity updatedProperty = propertyRepository.save(propertyEntity);
             return Optional.of(PropertyMapper.mapToAccountData(updatedProperty));
@@ -63,15 +66,28 @@ public class PropertyServiceimpl implements PropertyService {
             if (propertydata.getTitle() != null) {
                 propertyEntity.setTitle(propertydata.getTitle());
             }
-            if (propertydata.getLocation() != null) {
-                propertyEntity.setLocation(propertydata.getLocation());
+            if (propertydata.getType() != null){
+                propertyEntity.setType(propertydata.getType());
             }
-            if (propertydata.getPrice() != 0) {
-                propertyEntity.setPrice(propertydata.getPrice());
+            if (propertydata.getBhk() != 0){
+                propertyEntity.setBhk(propertydata.getBhk());
             }
             if (propertydata.getDescription() != null) {
                 propertyEntity.setDescription(propertydata.getDescription());
             }
+            if (propertydata.getArea() != null) {
+                propertyEntity.setArea(propertydata.getArea());
+            }
+            if (propertydata.getCity() != null){
+                propertyEntity.setCity(propertydata.getCity());
+            }
+            if (propertydata.getLocationUrl() != null){
+                propertyEntity.setLocationUrl(propertydata.getLocationUrl());
+            }
+            if (propertydata.getPrice() != 0) {
+                propertyEntity.setPrice(propertydata.getPrice());
+            }
+
             if (propertydata.getImageUrl() != null) {
                 propertyEntity.setImageUrl(propertydata.getImageUrl());
             }
@@ -88,8 +104,8 @@ public class PropertyServiceimpl implements PropertyService {
     }
 
     @Override
-    public List<Propertydata> getPropertiesByLocation(String location) {
-        List<PropertyEntity> properties = propertyRepository.findByLocationContainingIgnoreCase(location);
+    public List<Propertydata> getPropertiesByCity(String city) {
+        List<PropertyEntity> properties = propertyRepository.findByCityContainingIgnoreCase(city);
         List<Propertydata> propertyDataList = new ArrayList<>();
         for (PropertyEntity property : properties) {
             propertyDataList.add(PropertyMapper.mapToAccountData(property));
@@ -108,8 +124,8 @@ public class PropertyServiceimpl implements PropertyService {
     }
 
     @Override
-    public List<Propertydata> getPropertiesByLocationAndPriceRange(String location, double minPrice, double maxPrice) {
-        List<PropertyEntity> properties = propertyRepository.findByLocationContainingIgnoreCaseAndPriceBetween(location, minPrice, maxPrice);
+    public List<Propertydata> getPropertiesByCityAndPriceRange(String city, double minPrice, double maxPrice) {
+        List<PropertyEntity> properties = propertyRepository.findByCityContainingIgnoreCaseAndPriceBetween(city, minPrice, maxPrice);
         List<Propertydata> propertyDataList = new ArrayList<>();
         for (PropertyEntity property : properties) {
             propertyDataList.add(PropertyMapper.mapToAccountData(property));

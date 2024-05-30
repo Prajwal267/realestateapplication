@@ -11,8 +11,8 @@ public interface PropertyService {
     Optional<Propertydata> updateProperty(Long id, Propertydata propertydata);
     Optional<Propertydata> partialUpdateProperty(Long id, Propertydata propertydata);
     void deleteProperty(Long id);
-    List<Propertydata> getPropertiesByLocation(String location);
+    List<Propertydata> getPropertiesByCity(String city);
     List<Propertydata> getPropertiesByPriceRange(double minPrice, double maxPrice);
-    List<Propertydata> getPropertiesByLocationAndPriceRange(String location, double minPrice, double maxPrice);
+    List<Propertydata> getPropertiesByCityAndPriceRange(String city, double minPrice, double maxPrice);
 
 }
