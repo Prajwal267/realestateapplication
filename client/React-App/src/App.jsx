@@ -1,13 +1,13 @@
 import React from 'react'
-import Seller from './pages/Seller'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
- //Test your Modules here
+  //Test your Modules here
 
   return (
     <div className='container' >
-      <Seller />
+      <Navbar />
 
     </div>
   )

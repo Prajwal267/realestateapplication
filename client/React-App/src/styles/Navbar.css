@@ -1,52 +1,45 @@
-
-
 .navbar {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: rgb(151, 215, 224);
-    padding: 10px 30px 10px 40px;
-    box-shadow: 2px 2px 7px rgb(183, 182, 182);
+    justify-content: space-around;
+    background: rgb(255, 255, 255);
+    padding: 18px;
+    box-shadow: 2px 2px 6px rgb(183, 182, 182);
 }
 
 .logo {
-    width: 130px;
+    width: 160px;
     cursor: pointer;
 }
 
 ul {
-    flex: 1;
+    display: flex;
     text-align: center;
     list-style: none;
+
 }
 
 ul li {
     display: inline-block;
     margin: 10px 10px;
-    font-size: 16px;
     padding: 8px;
     border-radius: 70px;
-    transition: 0.5s ;
-    
-    
-
-
 }
-ul li:hover {
 
-    background: white;
-    box-shadow: 0 0 6px rgb(255, 255, 255);
-}
+
 
 li a {
     text-decoration: none;
     color: black;
-    padding: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-
-
-
+ul li a:hover {
+    color: rgb(120, 205, 226);
+    font-size: 16px;
 }
 
 
@@ -66,14 +59,32 @@ li a {
     outline: 0;
     font-size: 16px;
     max-width: 200px;
-
-
 }
-.search-box img{
+
+.search-box img {
     width: 20px;
 }
 
-.Profile{
+.Entry button {
+    width: 90px;
+    height: 40px;
+    outline: none;
+    margin-right: 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+
+}
+
+.Entry button:active {
+
+    background:rgb(120, 205, 226);
+    color: white;
+}
+
+ /*.Profile {
     display: flex;
     cursor: pointer;
     flex-direction: column;
@@ -81,16 +92,15 @@ li a {
     margin-left: 25px;
     margin-top: 5px;
 }
-.profile-pic{
+
+.profile-pic {
     width: 40px;
-    
+
     border-radius: 50px;
     margin-bottom: 5px;
 }
 
-.seller-name{
+.seller-name {
     font-size: 12px;
     font-weight: bold
-}
-
-
+} */
