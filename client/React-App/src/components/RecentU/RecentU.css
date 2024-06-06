@@ -1,0 +1,39 @@
+.Recent{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+    height: 90vh;
+
+    
+}
+.recent-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.recent-title h1{
+    align-items: center;
+  font-size: 50px;
+
+}
+.recent-title hr{
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: black;
+    
+}
+
+.recent-item{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 40px;
+    
+    gap: 30px;
+}
