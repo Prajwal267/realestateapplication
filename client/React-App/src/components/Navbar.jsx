@@ -59,15 +59,18 @@ const Navbar = () => {
       <div className="Profile-btn">
         <div className="Entry">
           <button>
-            <Link to="/login" style={{ textDecoration: "none" }}>
+            <Link to="/login" style={{ textDecoration: "none" ,color:'black' }}>
               Logout
             </Link>
           </button>
         </div>
 
         <div className="Profile">
+        <Link to="/profile" style={{ textDecoration: "none", color:'black' }}>
+              
+           
           <img src={profile} alt="profile" className="profile-pic" />
-          <p className="seller-name">Stitch</p>
+          <p className="seller-name">Stitch</p> </Link>
         </div>
       </div>
     </div>
