@@ -1,15 +1,29 @@
-import Seller from './pages/Seller'
-import './App.css'
+import React from 'react'
+import {BrowserRouter,Routes,Route } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Home from './pages/Home.jsx'
+import ManageProp from './pages/ManageProp.jsx'
+import PropertySts from './pages/PropertySts.jsx'
+import Property from './pages/Property.jsx'
+import LoginSignup from './pages/LoginSignup.jsx'
+import Profile from './pages/Profile.jsx'
 
-function App() {
- //Test your Modules here
-
+const App = () => {
   return (
-    <>
-    <h3>Test inside</h3>
-    <Seller/>
-      
-    </>
+    <div>
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/> } />
+      <Route path='/ManageProperty' element={<ManageProp/> } />
+      <Route path='/propertyStatus' element={<PropertySts/> } />
+      <Route path='/property' element={<Property/>}/>
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path=':propertId' element={<Property/>}/>
+      <Route path='/login' element={<LoginSignup/>}/>
+    </Routes>
+    </BrowserRouter>
+    </div>
   )
 }
 
