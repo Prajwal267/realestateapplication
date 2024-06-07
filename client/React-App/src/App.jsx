@@ -1,15 +1,13 @@
-import Seller from './pages/Seller'
 import './App.css'
+import { Home } from './Buyer/Home'
 
 function App() {
  //Test your Modules here
 
   return (
-    <>
-    <h3>Test inside</h3>
-    <Seller/>
-      
-    </>
+    <div>
+    <Home/>
+    </div>
   )
 }
 
