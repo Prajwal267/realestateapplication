@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/logo-react.png";
-import search from "../assets/search-icon.png";
+
 import profile from "../assets/profile-pic.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   return (
-    <div className="navbar">
+    <div className="navbar ps-5 pe-5">
       <img src={logo} alt="" className="logo" />
       <ul>
         <Link to="/" style={{ textDecoration: "none" }}>
@@ -52,10 +52,7 @@ const Navbar = () => {
           </li>
         </Link>
       </ul>
-      {/* <div className='search-box'>
-                <input type="text" placeholder="search" />
-                <img src={search} alt="" />
-            </div>*/}
+
       <div className="Profile-btn">
         <div className="Entry">
           <button>

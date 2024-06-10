@@ -7,6 +7,7 @@ import PropertySts from './pages/PropertySts.jsx'
 import Property from './pages/Property.jsx'
 import LoginSignup from './pages/LoginSignup.jsx'
 import Profile from './pages/Profile.jsx'
+import Footer from './components/Foooter/Footer.jsx'
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
       <Route path=':propertId' element={<Property/>}/>
       <Route path='/login' element={<LoginSignup/>}/>
     </Routes>
+    <></>
+    <Footer/>
     </BrowserRouter>
     </div>
   )

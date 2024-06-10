@@ -12,7 +12,7 @@ const Hero = () => {
           <p>Sell </p>
           <p>Today</p>
         </div>
-        <div className="hero-sell-btn">
+        <div className="hero-sell-btn" >
         Sell Your Property
         <img src={arrow_icon} alt="arrow" />
         </div>

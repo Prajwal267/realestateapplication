@@ -57,5 +57,13 @@ let data_property=[
         description:"This is a good building for a family have kitchen and attached bathroom",
         item_price:500000,
     },
+
+    {
+        id:8,
+        image:img_3,
+        name:"Apartment dodo",
+        description:"This is a good building for a family.",
+        item_price:500000,
+    },
 ]
 export default data_property;

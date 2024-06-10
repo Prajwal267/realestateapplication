@@ -18,3 +18,13 @@
     transform: scale(1.05);
     transition: 0.6s;
 }
+
+.card{
+    
+    max-width: 20em;
+}
+
+.card img{
+    max-width: 100%;
+}
+

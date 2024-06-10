@@ -2,10 +2,10 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background: rgb(255, 255, 255);
-    padding: 20px ;
     box-shadow: 2px 2px 6px rgb(183, 182, 182);
+    padding: 20px;
 }
 
 .logo {
@@ -17,7 +17,6 @@ ul {
     display: flex;
     text-align: center;
     list-style: none;
-
 }
 
 .list-item {
@@ -33,9 +32,6 @@ ul {
 }
 
 
-
-
-
 .list-item:hover {
     color: rgb(120, 205, 226);
     font-size: 16px;
@@ -47,35 +43,13 @@ ul {
     padding: 8px;
     border-radius: 70px;
     text-decoration: none;
-    color:  rgb(120, 205, 226);
+    color: rgb(120, 205, 226);
     font-size: 16px;
-    
     cursor: pointer;
-
 }
 
 
-.search-box {
-    display: flex;
-    background: rgb(255, 255, 255);
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 50px;
 
-}
-
-.search-box input {
-    background: transparent;
-    padding: 6px;
-    border: 0;
-    outline: 0;
-    font-size: 16px;
-    max-width: 200px;
-}
-
-.search-box img {
-    width: 20px;
-}
 
 .Entry button {
     width: 90px;
@@ -90,21 +64,22 @@ ul {
     transition: 0.2s;
 
 }
+
 .Entry button:hover {
 
-    background:rgb(219, 248, 255);
-    width:92px;
+    background: rgb(219, 248, 255);
+    width: 92px;
     height: 40px;
 }
 
-.Entry button:active:hover {
+.Entry button:active {
 
-    background:rgb(120, 205, 226);
+    background: rgb(120, 205, 226);
     color: white;
 }
 
 
- .Profile {
+.Profile {
     display: flex;
     cursor: pointer;
     flex-direction: column;
@@ -122,10 +97,11 @@ ul {
 
 .seller-name {
     font-size: 14px;
-    
-} 
-.Profile-btn{
+
+}
+
+.Profile-btn {
     display: flex;
     align-items: center;
-   
+
 }
