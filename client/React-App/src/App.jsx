@@ -15,6 +15,7 @@ const App = () => {
     <div>
     <BrowserRouter>
     <Navbar/>
+    <Slide/>
     <Routes>
       <Route path='/' element={<Home/> } />
       <Route path='/ManageProperty' element={<ManageProp/> } />
@@ -25,8 +26,7 @@ const App = () => {
       <Route path='/login' element={<LoginSignup/>}/>
     </Routes>
     <></>
-    <Slide/>
-    <Footer/>
+    {/* <Footer/> */}
     </BrowserRouter>
     </div>
   )

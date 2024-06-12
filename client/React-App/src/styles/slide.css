@@ -1,3 +1,8 @@
+#carouselExample{
+margin-top: -20px;
+margin-left:-20px;
+}
+
 .carousel-inner {
     position: relative;
   }
@@ -6,11 +11,12 @@
     height: 400px; 
     width: 100%;
     object-fit: cover;
+    opacity: 99%;
   }
   
   .title1 {
     position: absolute;
-    top: 30px; 
+    top: 90px; 
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -19,11 +25,12 @@
   }
   .para1 {
     position: absolute;
-    top: 100px; 
+    top: 140px; 
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgb(255, 254, 254);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-size: 1rem;
 
   }
