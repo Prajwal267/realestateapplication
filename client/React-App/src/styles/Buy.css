@@ -1,0 +1,44 @@
+
+.btn-group .btn {
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    border-right: none;
+}
+
+.btn-group .btn:last-child {
+    border-right: 1px solid #dee2e6;
+}
+
+.btn-group .btn.active {
+    border-bottom: 2px solid #009dff;
+    font-weight: bold;
+}
+
+.input-group .custom-select,
+.input-group .input-group-text {
+    border-radius: 0;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #007bff;
+}
+
+.custom-control-input:checked~.custom-control-label::after {
+    background-color: #fff;
+}
+
+.form-control,
+.custom-select {
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border-color: #007bff;
+    background-color: #007bff;
+}
+.form-control{
+    max-width: 300px;
+}
