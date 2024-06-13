@@ -1,17 +1,36 @@
-import React from 'react'
-
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import '../styles/BuyerMenu.css';
 const BuyerMenu = () => {
+    const location = useLocation();
+
     return (
-            <div className="property-search ">
-                <div className="btn-group d-flex mb-3" role="group">
-                    <button type="button" className="btn text-secondary active">Buy</button>
-                    <button type="button" className="btn text-secondary">Rent</button>
-                    <button type="button" className="btn text-secondary">Commercial</button>
-                </div>
+        <div className="property-search">
+            <div className="flex space-x-4 mb-3" role="group">
+                <Link 
+                    to="/Buy" 
+                    className={`btn text-secondary ${location.pathname === '/Buy' ? 'active' : ''} py-2 px-4 rounded`}
+                    aria-current={location.pathname === '/Buy' ? 'page' : undefined}
+                >
+                    Buy
+                </Link>
+                <Link 
+                    to="/Rent" 
+                    className={`btn text-secondary ${location.pathname === '/Rent' ? 'active' : ''}  py-2 px-4 rounded`}
+                    aria-current={location.pathname === '/Rent' ? 'page' : undefined}
+                >
+                    Rent
+                </Link>
+                <Link 
+                    to="/Comercial" 
+                    className={`btn text-secondary ${location.pathname === '/Comercial' ? 'active' : ''}  py-2 px-4 rounded`}
+                    aria-current={location.pathname === '/Comercial' ? 'page' : undefined}
+                >
+                    Commercial
+                </Link>
             </div>
-
-
-    )
+        </div>
+    );
 }
 
-export default BuyerMenu
+export default BuyerMenu;

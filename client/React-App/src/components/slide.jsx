@@ -31,3 +31,4 @@ export const Slide = () => {
     </div>
   );
 };
+export default Slide;

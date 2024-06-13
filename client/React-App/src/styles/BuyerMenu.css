@@ -1,0 +1,9 @@
+.btn-group .btn:last-child {
+    border-right: 1px solid #dee2e6;
+}
+
+.btn-group .btn.active {
+    border-bottom: 2px solid #0e91e2;
+    font-weight: bold;
+    
+}
