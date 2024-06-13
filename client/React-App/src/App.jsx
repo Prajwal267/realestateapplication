@@ -16,9 +16,7 @@ const App = () => {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/> } />
-      <Route path='/ManageProperty' element={<ManageProp/> } />
-      <Route path='/propertyStatus' element={<PropertySts/> } />
-      <Route path='/property' element={<Property/>}/>
+      <Route path='/UserRequest' element={<UserRequest/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path=':propertId' element={<Property/>}/>
       <Route path='/login' element={<LoginSignup/>}/>
