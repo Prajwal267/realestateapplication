@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./RecentU.css";
 import Item from "../Item/Item";
 import data_property from "../../assets/data";
 import search from "../../assets/search-icon.png";
-import {HomeContext} from '../context/PropertyContext'
-const RecentU = (props) => {
+const RecentU = () => {
   let count=data_property.length;
-const {Uploaded_product}=useContext(HomeContext);
+
   return (
     
     <div className="Recent">

@@ -21,17 +21,27 @@ const Navbar = () => {
             Home
           </li>
         </Link>
+        <Link to="/ManageProperty" style={{ textDecoration: "none" }}>
+          <li
+            onClick={() => {
+              setMenu("ManageProperty");
+            }}
+            className={menu === "ManageProperty" ? "active" : "list-item"}
+          >
+            Manage Property
+          </li>
+        </Link>
         <Link to="/PropertyStatus" style={{ textDecoration: "none" }}>
           <li
             onClick={() => {
-              setMenu("UserRequest");
+              setMenu("PropertyStatus");
             }}
-            className={menu === "UserRequest" ? "active" : "list-item"}
+            className={menu === "PropertyStatus" ? "active" : "list-item"}
           >
-            User Request
+            Property Status
           </li>
         </Link>
-        <Link to="/UserRequest" style={{ textDecoration: "none" }}>
+        <Link to="/#" style={{ textDecoration: "none" }}>
           <li
             onClick={() => {
               setMenu("About");
