@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Property = () => {
   return (
-    <div>Property</div>
+    <div></div>
   )
 }
 export default Property

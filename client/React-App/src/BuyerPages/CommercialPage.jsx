@@ -51,4 +51,4 @@ const CommercialPage = () => {
   );
 };
 
-export { CommercialPage };
+export default CommercialPage;
