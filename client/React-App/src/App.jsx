@@ -14,10 +14,10 @@ import Rent from './BuyerPages/Rent.jsx';
 import CommercialPage from './BuyerPages/CommercialPage.jsx';
 import BuyerMenu from './components/BuyerMenu.jsx';
 import PropertyArea from './components/PropertyArea.jsx';
-import propertyData from './data/propertyData'; 
 
 const App = () => {
-    const [selectedCity, setSelectedCity] = useState("Bangalore"); // State to hold selected city
+    const [selectedCity, setSelectedCity] = useState("Bangalore");
+    const [filters, setFilters] = useState({});
 
     return (
         <div>
@@ -27,8 +27,8 @@ const App = () => {
                 <div id="buyermenu" className="container border rounded-lg p-3">
                     <BuyerMenu />
                     <Routes>
-                        <Route path="/" element={<Navigate to="/Buy" replace />} /> {/* Default redirection to Buy */}
-                        <Route path="/Buy" element={<Buy setSelectedCity={setSelectedCity} />} /> {/* Pass setSelectedCity function as prop */}
+                        <Route path="/" element={<Navigate to="/Buy" replace />} />
+                        <Route path="/Buy" element={<Buy setSelectedCity={setSelectedCity} setFilters={setFilters} />} />
                         <Route path="/Rent" element={<Rent />} />
                         <Route path="/CommercialPage" element={<CommercialPage />} />
                     </Routes>
@@ -42,7 +42,7 @@ const App = () => {
                     <Route path="/login" element={<LoginSignup />} />
                 </Routes>
                 <hr id='hr1'></hr>
-                <PropertyArea selectedCity={selectedCity} />
+                <PropertyArea selectedCity={selectedCity} filters={filters} />
                 <Footer />
             </BrowserRouter>
         </div>
