@@ -13,12 +13,12 @@ import Footer from './components/Foooter/Footer.jsx';
 import Buy from './BuyerPages/Buy.jsx';
 import Rent from './BuyerPages/Rent.jsx'; // Import Rent component
 import BuyerMenu from './components/BuyerMenu.jsx';
-import Comercial from './BuyerPages/Comercial.jsx';
+import { CommercialPage } from './BuyerPages/CommercialPage.jsx';
 
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+       <BrowserRouter>
         <Navbar />
         <Slide />
         <div id="buyermenu" className="container border rounded-lg p-3">
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/Buy" element={<Buy />} />
             <Route path="/Rent" element={<Rent />} />
-            <Route  path="/Comercial" element={<Comercial/>} />
+            <Route path="/CommercialPage" element={<CommercialPage/>} />
           </Routes>
         </div>
         <Routes>

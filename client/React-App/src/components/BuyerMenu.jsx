@@ -22,11 +22,11 @@ const BuyerMenu = () => {
                     Rent
                 </Link>
                 <Link 
-                    to="/Comercial" 
-                    className={`btn text-secondary ${location.pathname === '/Comercial' ? 'active' : ''}  py-2 px-4 rounded`}
-                    aria-current={location.pathname === '/Comercial' ? 'page' : undefined}
+                    to="/CommercialPage" 
+                    className={`btn text-secondary ${location.pathname === '/CommercialPage' ? 'active' : ''}  py-2 px-4 rounded`}
+                    aria-current={location.pathname === '/CommercialPage' ? 'page' : undefined}
                 >
-                    Commercial
+                    Comercial
                 </Link>
             </div>
         </div>
