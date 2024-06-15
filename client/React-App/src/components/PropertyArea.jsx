@@ -1,8 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/property.css';
 import propertyData from '../data/propertyData';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const PropertyArea = ({ selectedCity, filters }) => {
     const properties = propertyData[selectedCity] || [];
@@ -10,15 +9,14 @@ const PropertyArea = ({ selectedCity, filters }) => {
     // Function to filter properties based on selected filters
     const filteredProperties = properties.filter(property => {
         let match = true;
-        if (filters.propertyType && filters.propertyType !== property.type) {
-            match = false;
-        }
         if (filters.bhkType && filters.bhkType !== property.bhkType) {
             match = false;
         }
         if (filters.propertyStatus && filters.propertyStatus !== property.status) {
             match = false;
         }
+        // Additional filtering logic can be added here for locality search if needed
+
         return match;
     });
 
@@ -38,7 +36,7 @@ const PropertyArea = ({ selectedCity, filters }) => {
                                     </p>
                                     <p className="card-text">
                                         <i className="bi bi-house" style={{ color: 'blue' }}></i> {property.bhkType}
-                                    </p> 
+                                    </p> {/* Display BHK type with icon */}
                                     <button type="button" className="btn btn-custom btn-sm">Enquiry</button>
                                 </div>
                             </div>
