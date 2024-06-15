@@ -33,6 +33,7 @@ const RecentU = () => {
                 name={item.name}
                 description={item.description}
                 price={item.item_price}
+                viewCount={item.view}
               />
             );
           }
