@@ -28,6 +28,7 @@ const App = () => {
                     <BuyerMenu />
                     <Routes>
                         <Route path="/" element={<Navigate to="/Buy" replace />} />
+
                         <Route path="/Buy" element={<Buy setSelectedCity={setSelectedCity} setFilters={setFilters} />} />
                         <Route path="/Rent" element={<Rent />} />
                         <Route path="/CommercialPage" element={<CommercialPage />} />

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/property.css';
 import propertyData from '../data/propertyData';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const PropertyArea = ({ selectedCity, filters }) => {
     const properties = propertyData[selectedCity] || [];
@@ -29,12 +31,15 @@ const PropertyArea = ({ selectedCity, filters }) => {
                         <div key={property.id} className="col-md-4 mb-5">
                             <div className="card card-custom">
                                 <img src={property.image} className="card-img-top" alt="Property" />
-                                {/* <div className="premium-badge">Sale</div> */}
                                 <div className="card-body">
                                     <h5 className="card-title">{property.name}</h5>
-                                    <p className="card-text">{property.location}</p>
-                                    <p className="card-text">{property.bhkType}</p> {/* Display BHK type */}
-                                    <button type="button" className="btn btn-custom btn-sm">View Property</button>
+                                    <p className="card-text">
+                                        <i className="bi bi-geo-alt" style={{ color: 'red' }}></i> {property.location}
+                                    </p>
+                                    <p className="card-text">
+                                        <i className="bi bi-house" style={{ color: 'blue' }}></i> {property.bhkType}
+                                    </p> {/* Display BHK type with icon */}
+                                    <button type="button" className="btn btn-custom btn-sm">Enquiry</button>
                                 </div>
                             </div>
                         </div>
