@@ -1,0 +1,88 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Carousel container */
+#carouselExampleCaptions {
+  margin: 0;
+  padding: 0;
+}
+
+/* Carousel images */
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Carousel captions */
+.carousel-caption {
+  bottom: 0;
+  background-color: rgba(83, 84, 61, 0.186); /* Semi-transparent black overlay */
+  padding: 40px;
+  margin-bottom: 30px; /* Increased margin for separation */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.carousel-caption h1.title1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.carousel-caption p.para1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-caption .sp1 {
+  color: aqua;
+  font-weight: bold;
+}
+
+/* Button styling */
+.carousel-caption .btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background-color: rgb(225, 255, 255); /* Light background color */
+  border: none;
+  border-radius: 50px;
+  color: #0b0101; /* Dark text color */
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.carousel-caption .btn:hover {
+  background-color: #00838f; /* Darker background color on hover */
+  color: #fff; /* Change text color on hover for better contrast */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
