@@ -2,11 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/property.css';
 import propertyData from '../data/propertyData';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const PropertyArea = ({ selectedCity, filters }) => {
+const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
     const properties = propertyData[selectedCity] || [];
 
-    // Function to filter properties based on selected filters
+    // Function to filter properties based on selected filters and locality search
     const filteredProperties = properties.filter(property => {
         let match = true;
         if (filters.bhkType && filters.bhkType !== property.bhkType) {
@@ -15,8 +16,9 @@ const PropertyArea = ({ selectedCity, filters }) => {
         if (filters.propertyStatus && filters.propertyStatus !== property.status) {
             match = false;
         }
-        // Additional filtering logic can be added here for locality search if needed
-
+        if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
+            match = false;
+        }
         return match;
     });
 
