@@ -44,27 +44,3 @@
 
 
 
-.search-box {
-    display: flex;
-    background: rgb(255, 255, 255);
-    justify-content: space-between;
-    width: 30%;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 1px solid rgb(120, 205, 226);
-
-}
-
-.search-box input {
-    background: transparent;
-    padding: 6px;
-    border: 0;
-    outline: 0;
-    font-size: 16px;
-    max-width: 200px;
-}
-
-.search-box img {
-    width: 20px;
-}

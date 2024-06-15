@@ -5,8 +5,8 @@ import Filter from '../components/filterSearch/Filter.jsx'
 const ManageProp = () => {
   return (
     <div className='container-fluid row p-0 m-0 '>
-      <div className='col-lg-3 col-md-4  d-flex justify-content-start pt-3 border'>
-      <Filter></Filter>
+      <div className='col-lg-3 col-md-4  d-flex justify-content-start pt-3 border' >
+      <Filter/>
       </div>
       
       <div className=' col-lg-9 col-md-8 border'>

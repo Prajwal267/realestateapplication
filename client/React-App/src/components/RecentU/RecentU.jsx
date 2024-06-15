@@ -2,7 +2,7 @@ import React from "react";
 import "./RecentU.css";
 import Item from "../Item/Item";
 import data_property from "../../assets/data";
-import search from "../../assets/search-icon.png";
+
 const RecentU = () => {
   
 

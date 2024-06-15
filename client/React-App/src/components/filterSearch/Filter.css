@@ -1,0 +1,36 @@
+.search-box{
+    display: flex;
+    background: rgba(75, 197, 242, 0.364);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 45px;
+    padding-right: 20px;
+    padding-left: 20px;
+  
+
+    
+}
+
+.search-box input {
+    background: transparent;
+    padding: 8px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    max-width: 200px;
+    
+}
+
+.search-box img {
+    width: 22px;
+
+    
+}
+
+.btn-color{
+    background: rgba(75, 197, 242, 0.364);
+}
+
+.btn-color:hover{
+    background: rgba(75, 197, 242, 0.819);
+}
