@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-// import "../styles/Rent.css"; // Adjust path and file name as per your project
 import propertyData from '../data/propertyData'; // Adjust path as needed
 
 const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) => {
@@ -104,17 +103,6 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
                 <div className="col-md-6">
                     <button className="btn btn-info mt-3" onClick={clearFilters}>Clear Filters</button>
                 </div>
-            </div>
-            <div className="mb-3">
-                {filteredProperties.map(property => (
-                    <div key={property.id}>
-                        <p>{property.name}</p>
-                        <p>{property.location}</p>
-                        <p>{property.bhkType}</p>
-                        <p>{property.status}</p>
-                        <img src={property.image} alt={property.name} style={{ width: '100px', height: '100px' }} />
-                    </div>
-                ))}
             </div>
         </div>
     );

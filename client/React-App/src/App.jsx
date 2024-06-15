@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Foooter/Footer.jsx';
 import Buy from './BuyerPages/Buy.jsx';
-import Rent from './BuyerPages/Rent.jsx';
+import Rent from './BuyerPages/Rent.jsx'; // Import Rent component
 import PropertyArea from './components/PropertyArea.jsx';
 import ManageProp from './pages/ManageProp.jsx';
 import PropertySts from './pages/PropertySts.jsx';
@@ -38,7 +38,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Navigate to="/Buy" replace />} />
                         <Route path="/Buy" element={<Buy setSelectedCity={setSelectedCity} setFilters={setFilters} setLocalitySearch={setLocalitySearch} />} />
-                        <Route path="/Rent" element={<Rent setSelectedCity={setSelectedCity} setFilters={setFilters} setLocalitySearch={setLocalitySearch} />} />
+                        <Route path="/Rent" element={<Rent selectedCity={selectedCity} setSelectedCity={setSelectedCity} setFilters={setFilters} setLocalitySearch={setLocalitySearch} />} /> {/* Rent component with necessary props */}
                         <Route path="/CommercialPage" element={<CommercialPage />} />
                     </Routes>
                 </div>

@@ -1,35 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import '../styles/property.css'; 
-import propertyData from '../data/propertyData';
+import '../styles/property.css';
+import propertyData from '../data/propertyData'; // Adjust path as needed
 
 const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
     const properties = propertyData[selectedCity] || [];
+    const [propertiesToShow, setPropertiesToShow] = useState([]);
+    const [showAllProperties, setShowAllProperties] = useState(false);
 
-    const filteredProperties = properties.filter(property => {
-        let match = true;
+    // Update propertiesToShow whenever selectedCity, filters, or localitySearch change
+    useEffect(() => {
+        // Filter properties based on filters and localitySearch
+        let filteredProperties = properties.filter(property => {
+            let match = true;
 
-        if (filters.bhkType && filters.bhkType !== property.bhkType) {
-            match = false;
+            if (filters.bhkType && filters.bhkType !== property.bhkType) {
+                match = false;
+            }
+
+            if (filters.propertyType && filters.propertyType !== property.type) {
+                match = false;
+            }
+
+            if (filters.propertyStatus && filters.propertyStatus !== property.propertyStatus) {
+                match = false;
+            }
+
+            if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
+                match = false;
+            }
+
+            return match;
+        });
+
+        // Always show at least 3 properties if filteredProperties are less than 3
+        if (filteredProperties.length < 3) {
+            setPropertiesToShow(filteredProperties);
+        } else {
+            setPropertiesToShow(showAllProperties ? filteredProperties : filteredProperties.slice(0, 3));
         }
-        
-        if (filters.propertyStatus && filters.propertyStatus !== property.propertyStatus) {
-            match = false;
-        }
+    }, [selectedCity, filters, localitySearch, showAllProperties, properties]);
 
-        if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
-            match = false;
-        }
-
-        return match;
-    });
+    const toggleShowAllProperties = () => {
+        setShowAllProperties(!showAllProperties);
+    };
 
     return (
         <>
             <h2 className="property-list-heading">Property List</h2>
             <div className="container mt-4">
                 <div className="row gx-4 gx-lg-5 mb-5">
-                    {filteredProperties.map(property => (
+                    {propertiesToShow.map(property => (
                         <div key={property.id} className="col-md-4 mb-5">
                             <div className="card card-custom">
                                 <img src={property.image} className="card-img-top" alt="Property" />
@@ -49,10 +70,20 @@ const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
                             </div>
                         </div>
                     ))}
+
+                    {properties.length > 3 && (
+                        <div className="text-center mb-3">
+                            {showAllProperties ? (
+                                <button className="btn btn-primary" onClick={toggleShowAllProperties}>See Less</button>
+                            ) : (
+                                <button className="btn btn-primary" onClick={toggleShowAllProperties}>See More</button>
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </>
     );
-}
+};
 
 export default PropertyArea;
