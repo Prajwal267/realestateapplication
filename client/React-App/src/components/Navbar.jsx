@@ -6,17 +6,17 @@ import profile from "../assets/profile-pic.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("Home");
+  const [menu, setMenu] = useState("/");
   return (
-    <div className="navbar ps-5 pe-5">
+    <div className="navbar sticky-top ps-5 pe-5">
       <img src={logo} alt="" className="logo" />
       <ul>
         <Link to="/" style={{ textDecoration: "none" }}>
           <li
             onClick={() => {
-              setMenu("Home");
+              setMenu("/");
             }}
-            className={menu === "Home" ? "active" : "list-item"}
+            className={menu === "/" ? "active" : "list-item"}
           >
             Home
           </li>

@@ -22,7 +22,7 @@ let data_property=[
         name: "Golden vill",
         description:"This is a good building for a family have kitchen and attached bathroom",
         item_price:80000,
-        view:50,
+        view:160,
     },
     {
         id:3,
@@ -30,7 +30,7 @@ let data_property=[
         name: "century apartment",
         description:"This is a good building for a family have kitchen and attached bathroom",
         item_price:65000,
-        view:300,
+        view:44,
     },
     {
         id:4,
@@ -38,7 +38,7 @@ let data_property=[
         name:"goda villa",
         description:"This is a good building for a family have kitchen and attached bathroom",
         item_price:835000,
-        view:40,
+        view:300,
     },
     {
         id:5,
@@ -54,7 +54,7 @@ let data_property=[
         name:"Silver Gem",
         description:"This is a good building for a family have kitchen and attached bathroom",
         item_price:350000,
-        view:90,
+        view:233,
     },
     {
         id:7,

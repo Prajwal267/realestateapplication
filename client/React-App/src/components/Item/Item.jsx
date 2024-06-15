@@ -13,10 +13,10 @@ const Item = (props) => {
         <p className="card-text">{props.item_price}</p>
         <div className="container-fluid  row ">
           <div className=" p-0 col-8">
-            <button type="button" className="btn btn-custom btn-sm me-2">
+            <button type="button" className="btn btn-custom btn-sm me-2 mb-2">
               Edit
             </button>
-            <button type="button" className="btn btn-custom btn-sm">
+            <button type="button" className="btn btn-custom btn-sm mb-2">
               View Property
             </button>
           </div>
