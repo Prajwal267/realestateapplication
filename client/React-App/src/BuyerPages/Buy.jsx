@@ -43,9 +43,23 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
     // Get localities based on selected city from propertyData
     const properties = propertyData[selectedCity] || [];
 
-    // Filter properties based on current locality search query
+    // Filter properties based on current filters and locality search
     const filteredProperties = properties.filter(property => {
-        return property.location.toLowerCase().includes(localitySearch.toLowerCase());
+        let match = true;
+
+        if (bhkType && bhkType !== property.bhkType) {
+            match = false;
+        }
+
+        if (propertyStatus && propertyStatus !== property.propertyStatus) {
+            match = false;
+        }
+
+        if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
+            match = false;
+        }
+
+        return match;
     });
 
     return (

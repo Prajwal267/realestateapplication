@@ -12,6 +12,7 @@ export const Slide = () => {
         </div>
         <div className="carousel-item">
           <img src={img2} className="d-block w-100" alt="img" />
+          
         </div>
         <div className="carousel-item">
           <img src={img3} className="d-block w-100" alt="img" />
