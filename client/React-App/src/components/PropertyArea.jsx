@@ -38,7 +38,7 @@ const PropertyArea = ({ selectedCity, filters }) => {
                                     </p>
                                     <p className="card-text">
                                         <i className="bi bi-house" style={{ color: 'blue' }}></i> {property.bhkType}
-                                    </p> {/* Display BHK type with icon */}
+                                    </p> 
                                     <button type="button" className="btn btn-custom btn-sm">Enquiry</button>
                                 </div>
                             </div>

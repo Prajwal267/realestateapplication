@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="Entry">
           <button>
             <Link to="/login" style={{ textDecoration: "none" ,color:'black' }}>
-              Logout
+              Login
             </Link>
           </button>
         </div>
