@@ -27,12 +27,6 @@ const Rent = () => {
             <label className="custom-control-label" htmlFor="fullHouse">Full House</label>
           </div>
         </div>
-        <div className="col-md-2">
-          <div className="custom-control custom-radio">
-            <input type="radio" id="landPlot" name="propertyType" className="custom-control-input" />
-            <label className="custom-control-label" htmlFor="landPlot">PG/Hostel</label>
-          </div>
-        </div>
       </div>
       <div className="form-row mb-3 align-items-center">
         <div className="col-md-6">
@@ -42,23 +36,10 @@ const Rent = () => {
                 <option value="BHK Type" disabled>BHK Type</option>
                 <option value="1BHK">1BHK</option>
                 <option value="2BHK">2BHK</option>
+                <option value="2BHK">3BHK</option>
+
               </select>
             </div>
-            <div className="col-md-3">
-              <select className="custom-select" defaultValue="Property Status">
-                <option value="Property Status" disabled>Property Status</option>
-                <option value="Ready">Ready</option>
-                <option value="Underconstruction">Under Construction</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="form-row mb-3 align-items-center">
-        <div className="col-md-4">
-          <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" id="newBuilderProjects" />
-            <label className="custom-control-label" htmlFor="newBuilderProjects">New Builder Projects</label>
           </div>
         </div>
       </div>

@@ -22,13 +22,13 @@ const BuyerMenu = () => {
                 >
                     Rent
                 </Link>
-                <Link
+                {/* <Link
                     to="/CommercialPage"
                     className={`btn ${location.pathname === '/CommercialPage' ? 'active' : ''}`}
                     aria-current={location.pathname === '/CommercialPage' ? 'page' : undefined}
                 >
                     Commercial
-                </Link>
+                </Link> */}
             </div>
         </div>
     );

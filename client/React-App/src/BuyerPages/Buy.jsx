@@ -31,6 +31,15 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
         setLocalitySearch(searchQuery); // Pass locality search query to parent component
     };
 
+    // Clear all filters and reset to default state
+    const clearFilters = () => {
+        setBhkType("");
+        setPropertyStatus("");
+        setLocalSearch("");
+        setFilters({}); // Clear filters in parent component
+        setLocalitySearch(""); // Clear locality search in parent component
+    };
+
     // Get localities based on selected city from propertyData
     const properties = propertyData[selectedCity] || [];
 
@@ -70,7 +79,7 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
                 <div className="col-md-6">
                     <div className="row">
                         <div className="col-md-3">
-                            <select className="custom-select" onChange={handleBhkTypeChange}>
+                            <select className="custom-select" onChange={handleBhkTypeChange} value={bhkType}>
                                 <option value="">BHK Type</option>
                                 <option value="1BHK">1BHK</option>
                                 <option value="2BHK">2BHK</option>
@@ -78,7 +87,7 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
                             </select>
                         </div>
                         <div className="col-md-3">
-                            <select className="custom-select" onChange={handlePropertyStatusChange}>
+                            <select className="custom-select" onChange={handlePropertyStatusChange} value={propertyStatus}>
                                 <option value="">Property Status</option>
                                 <option value="Ready">Ready</option>
                                 <option value="Underconstruction">Under Construction</option>
@@ -86,10 +95,12 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
                         </div>
                     </div>
                 </div>
+                <div className="col-md-6">
+                    <button className="btn btn-info mt-3" onClick={clearFilters}>Clear Filters</button>
+                </div>
             </div>
             {/* Display filtered localities */}
             <div className="mb-3">
-                <h5>Filtered Localities:</h5>
                 {filteredProperties.map(property => (
                     <p key={property.id}>{property.location}</p>
                 ))}
