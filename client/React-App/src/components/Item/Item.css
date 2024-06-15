@@ -19,12 +19,68 @@
     transition: 0.6s;
 }
 
-.card{
-    
-    max-width: 20em;
+.card-custom {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures the image doesn't overflow */
 }
 
-.card img{
-    max-width: 100%;
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-custom .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover .card-img-top {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.card-custom .premium-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: hsl(0, 100%, 51%); /* Premium badge background color */
+    color: #333; /* Premium badge text color */
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.card-custom .card-body {
+    padding: 1.25rem;
+}
+
+.card-custom .card-title {
+    font-weight: bold;
+    color: #333; /* Title color */
+}
+
+.card-custom .card-text {
+    color: #666; /* Text color */
+}
+
+.card-custom .card-text small {
+    color: #999; /* Small text color */
+}
+
+.card-custom .btn-custom {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-custom .btn-custom:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
