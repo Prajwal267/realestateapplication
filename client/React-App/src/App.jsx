@@ -48,7 +48,6 @@ const App = () => {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/login" element={<LoginSignup />} />
                 </Routes>
-                <hr id='hr1'></hr>
                 <PropertyArea ref={propertyAreaRef} selectedCity={selectedCity} filters={filters} localitySearch={localitySearch} />
                 <Footer />
             </BrowserRouter>
