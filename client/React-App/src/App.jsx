@@ -45,7 +45,6 @@ const App = () => {
                 </div>
                 <Routes>
                     <Route path="/PropertyList" element={<PropertyArea ref={propertyAreaRef} selectedCity={selectedCity} filters={filters} localitySearch={localitySearch} />} />
-                    <Route path="/Seller" element={<Seller />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/login" element={<LoginSignup />} />
                 </Routes>

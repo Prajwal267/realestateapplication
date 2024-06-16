@@ -39,6 +39,22 @@ const Navbar = ({ propertyAreaRef }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleAboutClick = () => {
+    const aboutSection = document.getElementById("about-section");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenu("About");
+  };
+
+  const handleScrollToSellerClick = () => {
+    const sellerSection = document.getElementById("seller-section");
+    if (sellerSection) {
+      sellerSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenu("SellProperty");
+  };
+
   return (
     <div className={`navbar ps-5 pe-5 ${isNavbarFixed ? "fixed" : ""}`}>
       <img src={logo} alt="logo" className="logo" />
@@ -57,14 +73,20 @@ const Navbar = ({ propertyAreaRef }) => {
         >
           Property List
         </li>
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <li
-            onClick={() => setMenu("About")}
-            className={menu === "About" ? "active" : "list-item"}
-          >
-            About
-          </li>
-        </Link>
+        <li
+          onClick={handleAboutClick}
+          className={menu === "About" ? "active" : "list-item"}
+          style={{ cursor: "pointer" }}
+        >
+          About
+        </li>
+        <li
+          onClick={handleScrollToSellerClick}
+          className={menu === "SellProperty" ? "active" : "list-item"}
+          style={{ cursor: "pointer" }}
+        >
+          Sell Your Property
+        </li>
       </ul>
 
       <div className="Profile-btn">

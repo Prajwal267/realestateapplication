@@ -4,7 +4,7 @@ import img1 from '../Accets/images/h3.jpg'; // Ensure this image path is correct
 
 const About = () => {
   return (
-    <section className="about-company">
+    <section id="about-section" className="about-company">
       <div className="bgcon" style={{ backgroundImage: `url(${img1})` }}>
         <div className="about-header">
           <h1>About RealEst</h1>

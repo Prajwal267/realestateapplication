@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import img1 from "../Accets/images/h1.jpg";
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
 import '../styles/Seller.css'; 
@@ -29,7 +29,7 @@ const Seller = () => {
   }, [testimonials.length]);
 
   return (
-    <div className="seller-container">
+    <div id="seller-section" className="seller-container">
       <div className="background-image">
         <div className="overlay"></div>
         <div className="content">
