@@ -57,14 +57,6 @@ const Navbar = ({ propertyAreaRef }) => {
         >
           Property List
         </li>
-        <Link to="/PropertyStatus" style={{ textDecoration: "none" }}>
-          <li
-            onClick={() => setMenu("PropertyStatus")}
-            className={menu === "PropertyStatus" ? "active" : "list-item"}
-          >
-            Sell your Property
-          </li>
-        </Link>
         <Link to="/" style={{ textDecoration: "none" }}>
           <li
             onClick={() => setMenu("About")}

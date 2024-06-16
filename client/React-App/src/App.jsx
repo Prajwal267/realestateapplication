@@ -49,6 +49,7 @@ const App = () => {
                     <Route path="/login" element={<LoginSignup />} />
                 </Routes>
                 <PropertyArea ref={propertyAreaRef} selectedCity={selectedCity} filters={filters} localitySearch={localitySearch} />
+                <Seller/>
                 <Footer />
             </BrowserRouter>
         </div>

@@ -1,16 +1,18 @@
-.proDiv{
-    background-color:rgb(232, 232, 235);
+/* property.css */
+
+.proDiv {
+    background-color: rgb(232, 232, 235);
 }
 
 .property-list-heading {
     font-size: 2rem;
     font-weight: bold;
-    color: #333; /* Adjust color as per your design */
-    margin-bottom: 60px; /* Increase margin bottom for more gap */
+    color: #333;
+    margin-bottom: 60px;
     margin-top: 60px;
     text-align: center;
     text-transform: uppercase;
-    position: relative; /* Required for pseudo-element */
+    position: relative; 
 }
 
 .property-list-heading::after {
@@ -18,24 +20,24 @@
     display: block;
     position: absolute;
     bottom: 0;
-    left: 50%; /* Adjust as needed */
-    width: 30%; /* Adjust as needed */
-    height: 3px; /* Adjust thickness of underline */
-    background-color: orange; /* Color of underline */
-    transform: translateX(-50%); /* Center underline */
+    left: 50%; 
+    width: 30%; 
+    height: 3px; 
+    background-color: orange; 
+    transform: translateX(-50%); 
+    transition: width 0.3s ease; 
 }
 
 .property-list-heading:hover::after {
-    width: 90%; /* Adjust width on hover */
+    width: 90%; 
 }
-
 
 .card-custom {
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Ensures the image doesn't overflow */
+    overflow: hidden; 
 }
 
 .card-custom:hover {
@@ -46,13 +48,13 @@
 .card-custom .card-img-top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 200px; /* Adjust height as needed */
+    height: 200px; 
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .card-custom:hover .card-img-top {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.1); 
 }
 
 .card-custom .premium-badge {
@@ -60,8 +62,8 @@
     top: 10px;
     left: 10px;
     padding: 5px 10px;
-    background-color: hsl(0, 100%, 51%); /* Premium badge background color */
-    color: #333; /* Premium badge text color */
+    background-color: hsl(0, 100%, 51%); 
+    color: #333; 
     font-weight: bold;
     border-radius: 5px;
     font-size: 12px;
@@ -73,27 +75,64 @@
 
 .card-custom .card-title {
     font-weight: bold;
-    color: #333; /* Title color */
+    color: #333; 
 }
 
 .card-custom .card-text {
-    color: #666; /* Text color */
+    color: #666; 
 }
 
 .card-custom .card-text small {
-    color: #999; /* Small text color */
+    color: #999;
 }
 
-.card-custom .btn-custom {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
+.btn-enquiry {
+    font-size: 16px;
+    padding: 10px 20px;
     border: none;
-    transition: background-color 0.3s ease;
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #28a745; 
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.card-custom .btn-custom:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+.btn-enquiry:hover {
+    background-color: #218838; 
+    transform: translateY(-2px);
 }
-/* .clrbtn{
-    width: 10;
-} */
+
+.btn-enquiry:active {
+    transform: translateY(0);
+}
+
+.btn-custom {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #007bff; 
+    background-image: linear-gradient(to bottom, #007bff, #0056b3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #01ffff;
+    transform: translateY(-2px);
+}
+
+.btn-custom:active {
+    transform: translateY(0);
+}
+
+.prev-button,
+.next-button {
+    margin: 0 10px;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
