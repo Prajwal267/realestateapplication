@@ -14,6 +14,7 @@ import BuyerMenu from './components/BuyerMenu.jsx';
 import propertyData from './data/propertyData.js';
 import CarouselComponent from './components/CarouselComponent.jsx';
 import './App.css';
+import About from './pages/About.jsx';
 
 const App = () => {
     const [selectedCity, setSelectedCity] = useState("Bangalore");
@@ -50,6 +51,7 @@ const App = () => {
                 </Routes>
                 <PropertyArea ref={propertyAreaRef} selectedCity={selectedCity} filters={filters} localitySearch={localitySearch} />
                 <Seller/>
+                <About/>
                 <Footer />
             </BrowserRouter>
         </div>
