@@ -74,7 +74,9 @@ footer {
     height: auto;
     object-fit: cover;
 }
-
+.gallery img:hover{
+    scale: 1.1;
+}
 
 form {
     display: flex;
