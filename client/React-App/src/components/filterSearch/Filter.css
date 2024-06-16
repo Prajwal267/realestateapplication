@@ -3,11 +3,10 @@
     background: rgba(75, 197, 242, 0.364);
     align-items: center;
     justify-content: space-between;
+    width: 21%;
     border-radius: 45px;
     padding-right: 20px;
     padding-left: 20px;
-  
-
     
 }
 
@@ -17,7 +16,7 @@
     border: 0;
     outline: 0;
     font-size: 16px;
-    max-width: 200px;
+    
     
 }
 
