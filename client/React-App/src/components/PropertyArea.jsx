@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, forwardRef } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/property.css';
 import propertyData from '../data/propertyData'; // Adjust path as needed
 
-const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
+const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref) => {
     const properties = propertyData[selectedCity] || [];
     const [propertiesToShow, setPropertiesToShow] = useState([]);
     const [showAllProperties, setShowAllProperties] = useState(false);
@@ -46,7 +46,7 @@ const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
     };
 
     return (
-        <>
+        <div ref={ref}>
             <h2 className="property-list-heading">Property List</h2>
             <div className="container mt-4">
                 <div className="row gx-4 gx-lg-5 mb-5">
@@ -82,8 +82,8 @@ const PropertyArea = ({ selectedCity, filters, localitySearch }) => {
                     )}
                 </div>
             </div>
-        </>
+        </div>
     );
-};
+});
 
 export default PropertyArea;

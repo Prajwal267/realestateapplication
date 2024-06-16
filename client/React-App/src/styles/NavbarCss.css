@@ -13,6 +13,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    color: black;
     right: 0;
     background-color: rgb(42, 194, 211); /* Blue background color */
     z-index: 1000;

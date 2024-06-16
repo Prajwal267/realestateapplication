@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const PropertySts = () => {
+export const Seller = () => {
   return (
     <div>PropertySts</div>
   )
 }
-export default PropertySts
+export default Seller;
