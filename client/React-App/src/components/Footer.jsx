@@ -18,9 +18,9 @@ const Footer = () => {
                 <div className="footer-column">
                     <h2>About Site</h2>
                     <p>We're reimagining how you buy, sell and rent. It's now easier to get into a place you love. So let's do this, together.</p>
-                    <p className="contact-info"><i className="fas fa-map-marker-alt" style={{ color: 'red', marginRight:'10px' }}></i>  Collins Street West, Victoria 8007, Australia.</p>
-                    <p className="contact-info"><i className="fas fa-phone" style={{ color: 'red', marginRight:'10px' }}></i>  +123 456 7890</p>
-                    <p className="contact-info"><i className="fas fa-envelope" style={{ color: 'red', marginRight:'10px' }}></i>  info@example.com</p>
+                    <p className="contact-info"><i className="fas fa-map-marker-alt" style={{ color: 'rgb(42, 194, 211)', marginRight:'10px' }}></i>  Collins Street West, Victoria 8007, Australia.</p>
+                    <p className="contact-info"><i className="fas fa-phone" style={{ color: 'rgb(42, 194, 211)', marginRight:'10px' }}></i>  +123 456 7890</p>
+                    <p className="contact-info"><i className="fas fa-envelope" style={{ color: 'rgb(42, 194, 211)', marginRight:'10px' }}></i>  info@example.com</p>
                 </div>
                 <div className="footer-column">
                     <h2>Navigation</h2>
@@ -51,7 +51,7 @@ const Footer = () => {
                     <h2>For Future Updates</h2>
                     <form>
                         <input type="email" placeholder="Your email" />
-                        <button type="submit"><i className="fas fa-arrow-right"></i></button>
+                        <button type="submit"><i className="fas fa-arrow-right " ></i></button>
                     </form>
                     <p>Don't forget to follow us on:</p>
                     <div className="social-icons">

@@ -74,9 +74,9 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
                     {properties.length > 3 && (
                         <div className="text-center mb-3">
                             {showAllProperties ? (
-                                <button className="btn btn-primary" onClick={toggleShowAllProperties}>See Less</button>
+                                <button className="btn" style={{ background: 'rgb(42, 194, 211)', marginRight:'10px' }} onClick={toggleShowAllProperties}>See Less</button>
                             ) : (
-                                <button className="btn btn-primary" onClick={toggleShowAllProperties}>See More</button>
+                                <button className="btn" style={{ background: 'rgb(42, 194, 211)', marginRight:'10px' }} onClick={toggleShowAllProperties}>See More</button>
                             )}
                         </div>
                     )}
