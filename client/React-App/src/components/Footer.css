@@ -31,6 +31,9 @@ footer {
     font-weight: bold;
     margin-bottom: 30px;
 }
+.footer-column h2:hover{
+    color: #00ffe5;
+}
 
 .footer-column p, .footer-column ul, .footer-column form {
     margin: 10px 0;
@@ -56,7 +59,8 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .gallery {
@@ -104,7 +108,9 @@ form button {
     border-top: 1px solid #444;
     margin-top: 20px;
 }
-
+.contact-info:hover{
+color: #f4f4f4;
+}
 .footer-bottom p, .footer-bottom ul {
     margin: 10px 0;
 }
