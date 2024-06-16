@@ -8,6 +8,7 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
     const [bhkType, setBhkType] = useState("");
     const [propertyType, setPropertyType] = useState("");
     const [localitySearch, setLocalitySearchState] = useState("");
+    const [price, setPrice] = useState(0); // State to hold selected price
 
     const handleBhkTypeChange = (event) => {
         const selectedBhkType = event.target.value;
@@ -27,10 +28,17 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
         setLocalitySearch(searchQuery);
     };
 
+    const handlePriceChange = (event) => {
+        const selectedPrice = event.target.value;
+        setPrice(selectedPrice);
+        setFilters(prevFilters => ({ ...prevFilters, price: selectedPrice }));
+    };
+
     const clearFilters = () => {
         setBhkType("");
         setPropertyType("");
         setLocalitySearchState("");
+        setPrice(0);
         setFilters({});
         setLocalitySearch("");
     };
@@ -47,6 +55,9 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
             match = false;
         }
         if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
+            match = false;
+        }
+        if (price && property.price > price) {
             match = false;
         }
 
@@ -99,11 +110,26 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
                             </select>
                         </div>
                     </div>
+                    <div className="col-md-6">
+                            <div className="price-range-container">
+                                <input
+                                    type="range"
+                                    className="custom-range range-input"
+                                    min="0"
+                                    max="50000000"
+                                    step="100000"
+                                    value={price}
+                                    onChange={handlePriceChange}
+                                />
+                                <div className="price-range-label">Price: {price}</div>
+                            </div>
+                        </div>
                 </div>
                 <div className="col-md-6">
                     <button className="btn btn-info mt-3" onClick={clearFilters}>Clear Filters</button>
                 </div>
             </div>
+
         </div>
     );
 };

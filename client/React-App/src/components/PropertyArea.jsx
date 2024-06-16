@@ -30,6 +30,10 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
                 match = false;
             }
 
+            if (filters.price && property.price > filters.price) {
+                match = false;
+            }
+
             return match;
         });
 
@@ -49,31 +53,47 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
         }
     };
 
+    const handleFavoriteClick = (propertyId) => {
+        // Placeholder function for handling favorite button click
+        console.log(`Added property with ID ${propertyId} to favorites.`);
+        // Implement your logic to manage favorites
+    };
+
     return (
         <div ref={ref}>
             <h2 className="property-list-heading">Property List</h2>
             <div className="container mt-4">
                 <div className="row gx-4 gx-lg-5 mb-5">
-                    {propertiesToShow.map(property => (
-                        <div key={property.id} className="col-md-4 mb-5">
-                            <div className="card card-custom">
-                                <img src={property.image} className="card-img-top" alt="Property" />
-                                <div className="card-body">
-                                    <h5 className="card-title">{property.name}</h5>
-                                    <p className="card-text">
-                                        <i className="bi bi-geo-alt" style={{ color: 'red' }}></i> {property.location}
-                                    </p>
-                                    <p className="card-text">
-                                        <i className="bi bi-house" style={{ color: 'blue' }}></i> {property.bhkType}
-                                    </p>
-                                    <p className="card-text">
-                                        <i className="bi bi-check-circle" style={{ color: 'green' }}></i> {property.propertyStatus}
-                                    </p>
-                                    <button type="button" className="btn btn-enquiry">Enquiry</button>
+                    {propertiesToShow.length > 0 ? (
+                        propertiesToShow.map(property => (
+                            <div key={property.id} className="col-md-4 mb-5">
+                                <div className="card card-custom">
+                                    <img src={property.image} className="card-img-top" alt="Property" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{property.name}</h5>
+                                        <p className="card-text">
+                                            <i className="bi bi-geo-alt" style={{ color: 'red' }}></i> {property.location}
+                                        </p>
+                                        <p className="card-text">
+                                            <i className="bi bi-house" style={{ color: 'blue' }}></i> {property.bhkType}
+                                        </p>
+                                        <p className="card-text">
+                                            <i className="bi bi-check-circle" style={{ color: 'green' }}></i> {property.propertyStatus}
+                                        </p>
+                                        <p className="card-text">
+                                            Price: ${property.price}
+                                        </p>
+                                        <button type="button" className="btn btn-enquiry">Enquiry</button>
+                                        <button type="button" className="btn btn-favorite" onClick={() => handleFavoriteClick(property.id)}>
+                                            <i className="bi bi-heart"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p className="text-center">No properties match your criteria.</p>
+                    )}
                     <div className="text-center mb-3">
                         <button className={`btn btn-custom prev-button ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev} disabled={startIndex === 0}>
                             <i className="bi bi-arrow-left"></i>
@@ -83,7 +103,6 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
                         </button>
                     </div>
                 </div>
-
             </div>
         </div>
     );

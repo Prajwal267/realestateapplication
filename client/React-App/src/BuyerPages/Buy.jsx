@@ -9,6 +9,7 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
     const [bhkType, setBhkType] = useState(""); // State to hold selected BHK type
     const [propertyStatus, setPropertyStatus] = useState(""); // State to hold selected property status
     const [localitySearch, setLocalSearch] = useState(""); // State to hold locality search query
+    const [price, setPrice] = useState(0); // State to hold selected price
 
     // Handler function for BHK type change
     const handleBhkTypeChange = (event) => {
@@ -31,11 +32,19 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
         setLocalitySearch(searchQuery); // Pass locality search query to parent component
     };
 
+    // Handler function for price change
+    const handlePriceChange = (event) => {
+        const selectedPrice = event.target.value;
+        setPrice(selectedPrice); // Update local state
+        setFilters(prevFilters => ({ ...prevFilters, price: selectedPrice })); // Pass selected price to parent component (filters)
+    };
+
     // Clear all filters and reset to default state
     const clearFilters = () => {
         setBhkType("");
         setPropertyStatus("");
         setLocalSearch("");
+        setPrice(0);
         setFilters({}); // Clear filters in parent component
         setLocalitySearch(""); // Clear locality search in parent component
     };
@@ -56,6 +65,10 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
         }
 
         if (localitySearch && !property.location.toLowerCase().includes(localitySearch.toLowerCase())) {
+            match = false;
+        }
+
+        if (price && property.price > price) {
             match = false;
         }
 
@@ -107,7 +120,22 @@ const Buy = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) =
                                 <option value="Underconstruction">Under Construction</option>
                             </select>
                         </div>
+                        
                     </div>
+                    <div className="col-md-6">
+                            <div className="price-range-container">
+                                <input
+                                    type="range"
+                                    className="custom-range range-input"
+                                    min="0"
+                                    max="50000000"
+                                    step="100000"
+                                    value={price}
+                                    onChange={handlePriceChange}
+                                />
+                                <div className="price-range-label">Price: {price}</div>
+                            </div>
+                        </div>
                 </div>
                 <div className="col-md-6">
                     <button className="btn btn-info mt-3" onClick={clearFilters}>Clear Filters</button>
