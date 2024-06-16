@@ -1,12 +1,12 @@
 import React, { useState, useEffect, forwardRef } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import '../styles/property.css';
+import '../styles/property.css'; // Import your custom CSS file
 import propertyData from '../data/propertyData'; // Adjust path as needed
 
 const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref) => {
     const properties = propertyData[selectedCity] || [];
     const [propertiesToShow, setPropertiesToShow] = useState([]);
-    const [showAllProperties, setShowAllProperties] = useState(false);
+    const [startIndex, setStartIndex] = useState(0); // Track the starting index for displaying properties
 
     // Update propertiesToShow whenever selectedCity, filters, or localitySearch change
     useEffect(() => {
@@ -33,16 +33,20 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
             return match;
         });
 
-        // Always show at least 3 properties if filteredProperties are less than 3
-        if (filteredProperties.length < 3) {
-            setPropertiesToShow(filteredProperties);
-        } else {
-            setPropertiesToShow(showAllProperties ? filteredProperties : filteredProperties.slice(0, 3));
-        }
-    }, [selectedCity, filters, localitySearch, showAllProperties, properties]);
+        // Set properties to show based on startIndex
+        setPropertiesToShow(filteredProperties.slice(startIndex, startIndex + 3));
+    }, [selectedCity, filters, localitySearch, startIndex, properties]);
 
-    const toggleShowAllProperties = () => {
-        setShowAllProperties(!showAllProperties);
+    const handleNext = () => {
+        if (startIndex + 3 < properties.length) {
+            setStartIndex(startIndex + 3);
+        }
+    };
+
+    const handlePrev = () => {
+        if (startIndex - 3 >= 0) {
+            setStartIndex(startIndex - 3);
+        }
     };
 
     return (
@@ -65,22 +69,21 @@ const PropertyArea = forwardRef(({ selectedCity, filters, localitySearch }, ref)
                                     <p className="card-text">
                                         <i className="bi bi-check-circle" style={{ color: 'green' }}></i> {property.propertyStatus}
                                     </p>
-                                    <button type="button" className="btn btn-custom btn-sm">Enquiry</button>
+                                    <button type="button" className="btn btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
                     ))}
-
-                    {properties.length > 3 && (
-                        <div className="text-center mb-3">
-                            {showAllProperties ? (
-                                <button className="btn" style={{ background: 'rgb(42, 194, 211)', marginRight:'10px' }} onClick={toggleShowAllProperties}>See Less</button>
-                            ) : (
-                                <button className="btn" style={{ background: 'rgb(42, 194, 211)', marginRight:'10px' }} onClick={toggleShowAllProperties}>See More</button>
-                            )}
-                        </div>
-                    )}
+                    <div className="text-center mb-3">
+                        <button className={`btn btn-custom prev-button ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev} disabled={startIndex === 0}>
+                            <i className="bi bi-arrow-left"></i>
+                        </button>
+                        <button className={`btn btn-custom next-button ${startIndex + 3 >= properties.length ? 'disabled' : ''}`} onClick={handleNext} disabled={startIndex + 3 >= properties.length}>
+                            <i className="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </div>
     );
