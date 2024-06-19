@@ -106,7 +106,7 @@ const Rent = ({ selectedCity, setSelectedCity, setFilters, setLocalitySearch }) 
                             <select className="custom-select" onChange={handlePropertyTypeChange} value={propertyType}>
                                 <option value="">Property Type</option>
                                 <option value="Full House">Full House</option>
-                                <option value="PG/Hostel">PG/Hostel</option>
+                                <option value="Apartment">Apartment</option>
                             </select>
                         </div>
                     </div>
