@@ -1,28 +1,41 @@
-import React from 'react'
-import data_property from '../assets/data'
-import Item from '../components/Item/Item'
-import Filter from '../components/filterSearch/Filter.jsx'
+import React from "react";
+import data_property from "../assets/data";
+import Item from "../components/Item/Item";
+import Filter from "../components/filterSearch/Filter.jsx";
+import search from "../assets/arrow_icon.png";
 const ManageProp = () => {
   return (
-    <div className='container-fluid row p-0 m-0 ' style={{ height: '100vh', overflow: 'hidden' }} >
-    <> { /*<div className='col-lg-3 col-md-4  d-flex justify-content-start pt-3 border left'  >
+    <div className="container-fluid row p-0 m-0 ">
+      <>
+        {" "}
+        {/*<div className='col-lg-3 col-md-4  d-flex justify-content-start pt-3 border left'  >
        <Filter/>
       </div>
       
-      <div className=' col-lg-9 col-md-8 border right' style={{ height: '100%', overflowY: 'auto' , scrollbarWidth: 'none'}}>*/}</>
-        
-        <div>
-          <Filter/>
-        </div>
-        <div>
-          <h4>Your Properties</h4>
-        </div>
-      <div className='row gx-4 mt-5 ' >
-       
-          {data_property.map((item, i) => {
-          
-            return (
-              <div className='col-lg-4 col-md-6 mb-5'>
+      <div className=' col-lg-9 col-md-8 border right' style={{ height: '100%', overflowY: 'auto' , scrollbarWidth: 'none'}}>*/}
+      </>
+
+      <div>
+        <Filter />
+      </div>
+      <div className="container d-flex ">
+      <div className="search-box ms-2 mb-4 mt-3">
+        <input type="text" placeholder="search" />
+        <img src={search} alt="" className="" />
+      </div>
+      <div className=" ms-3">
+      <button className=" btn btn-color mt-3" > ADD NEW PROPERTY</button>
+      </div>
+      </div>
+
+      <div className="ms-3">
+        <h4>Your Properties</h4>
+      </div>
+
+      <div className="row gx-4 mt-3 ">
+        {data_property.map((item, i) => {
+          return (
+            <div className="col-lg-4 col-md-6 mb-5">
               <Item
                 key={i}
                 id={item.id}
@@ -32,14 +45,12 @@ const ManageProp = () => {
                 price={item.item_price}
                 viewCount={item.view}
               />
-              </div>
-            );
-          })}
-          
-        </div>
-        </div>
-    
-  )
-}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default ManageProp
+export default ManageProp;

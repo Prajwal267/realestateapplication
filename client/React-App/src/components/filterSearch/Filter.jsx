@@ -6,10 +6,7 @@ const filter = () => {
     <div className="  filter border p-2">
       <h3 className="ms-2 mb-3">Filter search</h3>
 
-      <div className="search-box ms-2">
-        <input type="text" placeholder="search" />
-        <img src={search} alt="" className=""/>
-      </div>
+
 
       <form action="" className="mt-3">
         <label htmlFor="" className="mb-1 me-2">
@@ -69,10 +66,10 @@ const filter = () => {
         <label htmlFor="" className="me-2">Date</label>
          
         <input type="date" />
+        <button className="btn btn-color ms-3">Clear</button>
+
+
          
-        <div className="d-flex   justify-content-end me-5 mb-2">
-          <button className="btn btn-color ">Clear</button>
-        </div>
       </form>
     </div>
   );
