@@ -6,26 +6,17 @@ import search from "../assets/arrow_icon.png";
 const ManageProp = () => {
   return (
     <div className="container-fluid row p-0 m-0 ">
-      <>
-        {" "}
-        {/*<div className='col-lg-3 col-md-4  d-flex justify-content-start pt-3 border left'  >
-       <Filter/>
-      </div>
-      
-      <div className=' col-lg-9 col-md-8 border right' style={{ height: '100%', overflowY: 'auto' , scrollbarWidth: 'none'}}>*/}
-      </>
-
       <div>
         <Filter />
       </div>
       <div className="container d-flex ">
-      <div className="search-box ms-2 mb-4 mt-3">
-        <input type="text" placeholder="search" />
-        <img src={search} alt="" className="" />
-      </div>
-      <div className=" ms-3">
-      <button className=" btn btn-color mt-3" > ADD NEW PROPERTY</button>
-      </div>
+        <div className="search-box ms-2 mb-4 mt-3">
+          <input type="text" placeholder="search" />
+          <img src={search} alt="" className="" />
+        </div>
+        <div className=" ms-3">
+          <button className=" btn btn-color mt-3"> ADD NEW PROPERTY</button>
+        </div>
       </div>
 
       <div className="ms-3">
