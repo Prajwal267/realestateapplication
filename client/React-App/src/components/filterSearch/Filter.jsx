@@ -9,13 +9,13 @@ const filter = () => {
 
 
       <form action="" className="mt-3">
-        <label htmlFor="" className="mb-1 me-2">
+        <label htmlFor="" className=" me-2">
           Location
         </label>
         
         <select name="" id="Location" className="mb-3 me-2">
           <option value="bangalore" selected>
-            State
+            City
           </option>
           <option value="bangalore">Bangalore</option>
           <option value="bangalore">Mumbai</option>
@@ -32,18 +32,18 @@ const filter = () => {
           <option value="Kormangala">Kormangala</option>
         </select>
        
-        <label htmlFor="" className="me-2">
+        <label htmlFor="" className="me-2 ">
           Apartment
         </label>
-        <input type="radio" name="he" className="me-4" />
+        <input type="radio" name="he" className="me-4 mb-4" />
         <label htmlFor="" className="me-2">
           Rent
         </label>
-        <input type="radio" name="he" className="me-4" />
+        <input type="radio" name="he" className="me-4 mb-4" />
         <label htmlFor="" className="me-2">
           Both
         </label>
-        <input type="radio" name="he" className="mb-3 me-3" />
+        <input type="radio" name="he" className="mb-4 me-3" />
        
 
         <select name="" id="bhk" className="mb-3 me-3">
@@ -65,8 +65,8 @@ const filter = () => {
         
         <label htmlFor="" className="me-2">Date</label>
          
-        <input type="date" />
-        <button className="btn btn-color ms-3">Clear</button>
+        <input type="date" className="mb-3"/>
+        <button className="btn btn-color ms-3 mb-3">Clear</button>
 
 
          

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Profile = () => {
   return (
-    <div>
-      cd client
+    <div className="contaner">
+      
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

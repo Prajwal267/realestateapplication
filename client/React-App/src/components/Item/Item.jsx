@@ -37,7 +37,8 @@ export default Item;
       <p>{props.name}</p>
       <p>{props.description}</p>
       <div className="item-price">{props.item_price}</div>
-    </div>*/
+    </div>
+  */
 }
 
 {
