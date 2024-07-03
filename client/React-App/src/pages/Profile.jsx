@@ -9,7 +9,7 @@ const Profile = () => {
     email: "johndoe@example.com",
     location: "New York, USA",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
-    profilePicture: { img }, // add a new property to store the profile picture URL
+    profilePicture:img , // add a new property to store the profile picture URL
   });
 
   const handleEdit = () => {
@@ -38,13 +38,14 @@ const Profile = () => {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       {editing ? (
-        <form>
+        <form className="forms">
           <div className="">
             <label>
               Name:
               <input
+              className="input"
                 type="text"
                 name="name"
                 value={profile.name}
@@ -55,6 +56,7 @@ const Profile = () => {
             <label>
               Profession:
               <input
+              className="input"
                 type="text"
                 name="profession"
                 value={profile.profession}
@@ -65,6 +67,7 @@ const Profile = () => {
             <label>
               Email:
               <input
+              className="input"
                 type="email"
                 name="email"
                 value={profile.email}
@@ -75,6 +78,7 @@ const Profile = () => {
             <label>
               Location:
               <input
+              className="input"
                 type="text"
                 name="location"
                 value={profile.location}
@@ -85,6 +89,7 @@ const Profile = () => {
             <label>
               Bio:
               <textarea
+              className="textarea"
                 name="bio"
                 value={profile.bio}
                 onChange={handleChange}
@@ -94,6 +99,7 @@ const Profile = () => {
             <label>
               Profile Picture:
               <input
+              className="input"
                 type="file"
                 name="profilePicture"
                 onChange={handleProfilePictureChange}
@@ -107,6 +113,8 @@ const Profile = () => {
           </div>
         </form>
       ) : (
+        <div>
+          <h1 align="center">Profile</h1>
         <div>
           <h1>{profile.name}</h1>
           <p>{profile.profession}</p>
@@ -131,7 +139,7 @@ const Profile = () => {
             </li>
           </ul>
           <button onClick={handleEdit}>Edit</button>
-        </div>
+        </div></div>
       )}
     </div>
   );

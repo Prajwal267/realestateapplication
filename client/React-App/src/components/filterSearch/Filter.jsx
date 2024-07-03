@@ -1,13 +1,9 @@
 import React from "react";
-import search from "../../assets/search-icon.png";
 import "../filterSearch/Filter.css";
 const filter = () => {
   return (
-    <div className="  filter border p-2">
+    <div className="filter border p-2">
       <h3 className="ms-2 mb-3">Filter search</h3>
-
-
-
       <form action="" className="mt-3">
         <label htmlFor="" className=" me-2">
           Location

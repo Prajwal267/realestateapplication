@@ -41,7 +41,7 @@ const Navbar = () => {
             Property Status
           </li>
         </Link>
-        <Link to="/#" style={{ textDecoration: "none" }}>
+        <Link to="/about" style={{ textDecoration: "none" }}>
           <li
             onClick={() => {
               setMenu("About");

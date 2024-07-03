@@ -4,10 +4,10 @@ import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import ManageProp from './pages/ManageProp.jsx'
 import PropertySts from './pages/PropertySts.jsx'
-import Property from './pages/Property.jsx'
 import LoginSignup from './pages/LoginSignup.jsx'
 import Profile from './pages/Profile.jsx'
 import Footer from './components/Foooter/Footer.jsx'
+import About from './pages/About.jsx'
 
 const App = () => {
   return (
@@ -19,9 +19,8 @@ const App = () => {
       <Route path='/' element={<Home/> } />
       <Route path='/ManageProperty' element={<ManageProp/> } />
       <Route path='/propertyStatus' element={<PropertySts/> } />
-      <Route path='/property' element={<Property/>}/>
       <Route path='/profile' element={<Profile/>}/>
-      <Route path=':propertId' element={<Property/>}/>
+      <Route path='/about' element={<About/>}/>
       <Route path='/login' element={<LoginSignup/>}/>
     </Routes>
     <></>
