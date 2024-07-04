@@ -1,79 +1,116 @@
-import img_1 from "../assets/data-im1.jpg"
-import img_2 from "../assets/data-im2.jpg"
-import img_3 from "../assets/data-im3.jpg"
-import img_4 from "../assets/data-im4.jpg"
-import img_5 from "../assets/data-im5.jpg"
-import img_6 from "../assets/data-im6.jpg"
-import img_7 from "../assets/data-im7.jpg"
+import img_1 from "../assets/data-im1.jpg";
+import img_2 from "../assets/data-im2.jpg";
+import img_3 from "../assets/data-im3.jpg";
+import img_4 from "../assets/data-im4.jpg";
+import img_5 from "../assets/data-im5.jpg";
+import img_6 from "../assets/data-im6.jpg";
+import img_7 from "../assets/data-im7.jpg";
 
+const data_property = [
+  {
+    id: 1,
+    image: img_1,
+    name: "Wild View Garden",
+    description: "This is a good building for a family",
+    item_price: 250000,
+    view: 20,
+    location: "bangalore",
+    locality: "madiwala",
+    type: "rent",
+    bhk: "2bhk",
+    date: "2023-06-15",
+  },
+  {
+    id: 2,
+    image: img_2,
+    name: "Golden vill",
+    description: "This is a good building for a family",
+    item_price: 80000,
+    view: 160,
+    location: "mumbai",
+    locality: "jpnagar",
+    type: "sell",
+    bhk: "3bhk",
+    date: "2023-07-01",
+  },
+  {
+    id: 3,
+    image: img_3,
+    name: "Century apartment",
+    description: "This is a good building for a family",
+    item_price: 65000,
+    view: 44,
+    location: "chennai",
+    locality: "indiranagar",
+    type: "both",
+    bhk: "1bhk",
+    date: "2023-06-20",
+  },
+  {
+    id: 4,
+    image: img_4,
+    name: "Goda villa",
+    description: "This is a good building for a family",
+    item_price: 835000,
+    view: 300,
+    location: "bangalore",
+    locality: "kormangala",
+    type: "rent",
+    bhk: "4bhk",
+    date: "2023-07-10",
+  },
+  {
+    id: 5,
+    image: img_5,
+    name: "Nature Group",
+    description: "This is a good building for a family",
+    item_price: 800000,
+    view: 20,
+    location: "mumbai",
+    locality: "madiwala",
+    type: "sell",
+    bhk: "2bhk",
+    date: "2023-06-25",
+  },
+  {
+    id: 6,
+    image: img_6,
+    name: "Silver Gem",
+    description: "This is a good building for a family",
+    item_price: 350000,
+    view: 233,
+    location: "chennai",
+    locality: "jpnagar",
+    type: "both",
+    bhk: "3bhk",
+    date: "2023-07-05",
+  },
+  {
+    id: 7,
+    image: img_7,
+    name: "Apartment Dodo",
+    description: "This is a good building for a family",
+    item_price: 500000,
+    view: 30,
+    location: "bangalore",
+    locality: "indiranagar",
+    type: "rent",
+    bhk: "2bhk",
+    date: "2023-07-15",
+  },
+  {
+    id: 8,
+    image: img_3,
+    name: "Sasi Apartment",
+    description: "This is a good building for a family",
+    item_price: 65000,
+    view: 50000,
+    location: "chennai",
+    locality: "kormangala",
+    type: "sell",
+    bhk: "1bhk",
+    date: "2023-07-20",
+  },
+];
 
-let data_property=[
-    {
-        id:1,
-        image:img_1,
-        name: "Wild View Garden",
-        description:"This is a good building for a family ",
-        item_price:250000,
-        view:20,
-    },
-    {
-        id:2,
-        image:img_2,
-        name: "Golden vill",
-        description:"This is a good building for a family ",
-        item_price:80000,
-        view:160,
-    },
-    {
-        id:3,
-        image:img_3,
-        name: "century apartment",
-        description:"This is a good building for a family ",
-        item_price:65000,
-        view:44,
-    },
-    {
-        id:4,
-        image:img_4,
-        name:"goda villa",
-        description:"This is a good building for a family ",
-        item_price:835000,
-        view:300,
-    },
-    {
-        id:5,
-        image:img_5,
-        name:"Nature Group",
-        description:"This is a good building for a family ",
-        item_price:800000,
-        view:20,
-    },
-    {
-        id:6,
-        image:img_6,
-        name:"Silver Gem",
-        description:"This is a good building for a family ",
-        item_price:350000,
-        view:233,
-    },
-    {
-        id:7,
-        image:img_7,
-        name:"Apartment dodo",
-        description:"This is a good building for a family ",
-        item_price:500000,
-        view:30,
-    },
-
-    {
-        id:8,
-        image:img_3,
-        name: "sasi apartment",
-        description:"This is a good building for a family ",
-        item_price:65000,
-        view:50000,
-        
-    },
-
-]
 export default data_property;
