@@ -68,7 +68,6 @@ const Navbar = () => {
         <div className="Profile">
         <Link to="/profile" style={{ textDecoration: "none", color:'black' }}>
               
-           
           <img src={profile} alt="profile" className="profile-pic" />
           <p className="seller-name">Stitch</p> </Link>
         </div>
